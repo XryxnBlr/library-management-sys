@@ -51,7 +51,9 @@ We welcome contributions! To contribute, fork the repository, make changes, and 
 ## License
 This project is licensed under the GPL-3.0 License - see the LICENSE file for details.
 
-### Project Structureplaintext
+### Project Structure
+
+```plaintext
 library-management-system/
 ├── lms/
 │   ├── __init__.py          # Initializes the package
