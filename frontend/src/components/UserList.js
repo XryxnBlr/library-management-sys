@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "../api/axios";
 
 function UserList() {
   const [users, setUsers] = useState([]);
 
-  // Fetch users from API or backend (placeholder for now)
-  const fetchUsers = () => {
-    setUsers([
-      { id: 1, name: "User A" },
-      { id: 2, name: "User B" },
-    ]);
-  };
+  useEffect(() => {
+    axios.get("/users")
+      .then(response => setUsers(response.data))
+      .catch(error => console.error("Error fetching users:", error));
+  }, []);
 
   return (
     <div>
       <h2>Users</h2>
-      <button onClick={fetchUsers}>Load Users</button>
       <ul>
-        {users.map((user) => (
-          <li key={user.id}>{user.name}</li>
+        {users.map(user => (
+          <li key={user.id}>
+            {user.name} - Borrowed Books: {user.borrowed_books}
+          </li>
         ))}
       </ul>
     </div>

@@ -13,7 +13,7 @@ class Book(BookBase):
     available: bool
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class UserBase(BaseModel):
     name: str
@@ -26,4 +26,4 @@ class User(UserBase):
     borrowed_books: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True

@@ -1,25 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import UserList from "../components/UserList";
 
 function Users() {
-  const [users, setUsers] = useState([]);
-
-  // Fetch users from API or backend (placeholder for now)
-  const fetchUsers = () => {
-    setUsers([
-      { id: 1, name: "User A" },
-      { id: 2, name: "User B" },
-    ]);
-  };
-
   return (
     <div>
-      <h2>Users</h2>
-      <button onClick={fetchUsers}>Load Users</button>
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>{user.name}</li>
-        ))}
-      </ul>
+      <UserList />
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import React from "react";
+import Notification from "../components/Notification";
 
 function Notifications() {
   return (
     <div>
-      <h2>Notifications</h2>
-      <p>Feature coming soon...</p>
+      <Notification />
     </div>
   );
 }
