@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "../api/axios";
 
-function Notification({ message }) {
+function Notification() {
+  const [notifications, setNotifications] = useState([]);
+
+  useEffect(() => {
+    axios.get("/notifications")
+      .then(response => setNotifications(response.data.notifications))
+      .catch(error => console.error("Error fetching notifications:", error));
+  }, []);
+
   return (
-    <div className="notification">
-      <p>{message}</p>
+    <div>
+      <h2>Notifications</h2>
+      <p>{notifications}</p>
     </div>
   );
 }
