@@ -8,32 +8,54 @@ This project is an open-source Library Management System designed to:
 4. Return books and handle overdue notifications.
 
 ## Installation
-1. Clone the repository: `git clone <repo-url>`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run the application: `python main.py`
+Follow these steps to get your environment set up:
 
-## Features
-- Add and remove books
-- Search books by title, author, or ISBN
-- Borrow and return books
-- Manage user records
-
-## Contributions
-Follow the GitHub pull request workflow:
-1. Create a feature branch.
-2. Commit changes with clear messages.
-3. Submit a pull request.
-
----
-
-#### requirements
+Clone the repository:
 
     ```bash
-    sqlite3
+    git clone https://github.com/your-username/library-management-system.git
+    cd library-management-system
     ```
 
----
+Install the required dependencies:
 
+    ```bash
+    pip install -r requirements.txt
+    Set up your local database or adjust the models as needed.
+    ```
+
+## Usage
+To run the Library Management System:
+
+    ```bash
+    python lms/main.py
+    ```
+This will start the system and provide a basic interface for managing books and users.
+
+## Tests
+To run unit tests, use the following command:
+
+    ```bash
+    pytest
+    ```
+This will run the tests in the tests/test_models.py file.
+
+## Dependencies
+
+    Python 3.6+
+    Flask (or any other web framework if preferred)
+    SQLAlchemy (if using a database)
+You can install these dependencies by running:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Contributing
+We welcome contributions! To contribute, fork the repository, make changes, and submit a pull request with a description of what was changed.
+
+## License
+This project is licensed under the GPL-3.0 License - see the LICENSE file for details.
 
 ### Project Structure
 
