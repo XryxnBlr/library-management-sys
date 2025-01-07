@@ -7,18 +7,52 @@ This project is an open-source Library Management System designed to:
 3. Manage user records.
 4. Return books and handle overdue notifications.
 
+Here's the corrected Installation section for the README.md:
+
+markdown
+
+
 ## Installation
-Follow these steps to get your environment set up:
 
-Clone the repository:
+### Backend Setup
+1. Clone the repository:
+`git clone https://github.com/MiteshJain8/library-management-sys.git`
+`cd library-management-sys`
 
-    git clone https://github.com/your-username/library-management-system.git
-    cd library-management-system
 
-Install the required dependencies:
+2. Create and activate virtual environment:
 
-    pip install -r requirements.txt
-    Set up your local database or adjust the models as needed.
+`python -m venv library-management-sys`
+`source library-management-sys/bin/activate`  # For Linux/Mac
+
+
+3. Install backend dependencies:
+`cd backend`  
+`pip install -r requirements.txt`  
+
+
+4. Start the backend server:
+
+`uvicorn app.main:app --reload`
+
+
+### Frontend Setup
+1. Navigate to frontend directory:
+
+`cd frontend`
+
+
+2. Install frontend dependencies:
+
+`npm install` 
+
+
+3. Start the frontend development server:
+`npm start`
+
+
+The backend API will be available at http://localhost:8000  
+The frontend application will be available at http://localhost:3000
 
 ## Usage
 To run the Library Management System:
