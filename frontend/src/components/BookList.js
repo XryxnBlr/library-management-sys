@@ -11,7 +11,7 @@ function BookList() {
   }, []);
 
   return (
-    <div>
+    <div className="page-container">
       <h2>Books</h2>
       <ul>
         {books.map(book => (

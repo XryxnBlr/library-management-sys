@@ -2,7 +2,11 @@ from fastapi import APIRouter
 
 router = APIRouter()
 
+notifications = []
+
+def add_notification(message):
+    notifications.append(message)
+
 @router.get("/")
 def get_notifications():
-    # Placeholder for overdue book notifications
-    return {"notifications": "Feature under development"}
+    return {"notifications": notifications}

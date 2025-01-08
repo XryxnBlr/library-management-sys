@@ -11,9 +11,13 @@ function Notification() {
   }, []);
 
   return (
-    <div>
+    <div className="notification">
       <h2>Notifications</h2>
-      <p>{notifications}</p>
+      <ul>
+        {notifications.map((notification, index) => (
+          <li key={index}>{notification}</li>
+        ))}
+      </ul>
     </div>
   );
 }

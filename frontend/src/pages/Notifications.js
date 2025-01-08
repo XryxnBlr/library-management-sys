@@ -3,7 +3,7 @@ import Notification from "../components/Notification";
 
 function Notifications() {
   return (
-    <div>
+    <div className="page-container">
       <Notification />
     </div>
   );

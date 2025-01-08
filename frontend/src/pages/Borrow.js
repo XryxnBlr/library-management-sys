@@ -1,10 +1,10 @@
 import React from "react";
+import BorrowBook from "../components/BorrowBook";
 
 function Borrow() {
   return (
-    <div>
-      <h2>Borrow Books</h2>
-      <p>Feature coming soon...</p>
+    <div className="page-container">
+      <BorrowBook />
     </div>
   );
 }
