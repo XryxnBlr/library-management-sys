@@ -7,10 +7,6 @@ This project is an open-source Library Management System designed to:
 3. Manage user records.
 4. Return books and handle overdue notifications.
 
-Here's the corrected Installation section for the README.md:
-
-markdown
-
 
 ## Installation
 
