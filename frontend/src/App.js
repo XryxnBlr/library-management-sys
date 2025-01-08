@@ -8,6 +8,8 @@ import Users from "./pages/Users";
 import Borrow from "./pages/Borrow";
 import Return from "./pages/Return";
 import Notifications from "./pages/Notifications";
+import AddUser from "./components/AddUser";
+import AddBook from "./components/AddBook";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/borrow" element={<Borrow />} />
           <Route path="/return" element={<Return />} />
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="/add-user" element={<AddUser />} />
+          <Route path="/add-book" element={<AddBook />} />
         </Routes>
         <Footer />
       </div>

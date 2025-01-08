@@ -3,7 +3,7 @@ import UserList from "../components/UserList";
 
 function Users() {
   return (
-    <div>
+    <div className="page-container">
       <UserList />
     </div>
   );

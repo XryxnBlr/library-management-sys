@@ -1,10 +1,10 @@
 import React from "react";
+import ReturnBook from "../components/ReturnBook";
 
 function Return() {
   return (
-    <div>
-      <h2>Return Books</h2>
-      <p>Feature coming soon...</p>
+    <div className="page-container">
+      <ReturnBook />
     </div>
   );
 }

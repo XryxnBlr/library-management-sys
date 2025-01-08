@@ -20,6 +20,23 @@ def update_book_availability(db: Session, book_id: int, available: bool):
         db.refresh(db_book)
     return db_book
 
+def borrow_book(db: Session, book_id: int, user_id: int):
+    user = db.query(models.User).filter(models.User.id == user_id).first()
+    if user:
+        borrowed_books = user.borrowed_books.split(",") if user.borrowed_books else []
+        borrowed_books.append(str(book_id))
+        user.borrowed_books = ",".join(borrowed_books)
+        db.commit()
+
+def return_book(db: Session, book_id: int, user_id: int):
+    user = db.query(models.User).filter(models.User.id == user_id).first()
+    if user:
+        borrowed_books = user.borrowed_books.split(",") if user.borrowed_books else []
+        if str(book_id) in borrowed_books:
+            borrowed_books.remove(str(book_id))
+            user.borrowed_books = ",".join(borrowed_books)
+            db.commit()
+
 # User CRUD operations
 def get_users(db: Session):
     return db.query(models.User).all()
