@@ -3,9 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library Management System </title>
+    <title>Library Management System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+      }
+      nav {
+        background-color: #4caf50;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      nav h1 {
+        margin: 0;
+      }
+      header {
+        text-align: center;
+        padding: 2rem;
+        background-color: #007bff;
+        color: white;
+      }
+      header h2 {
+        margin: 0.5rem 0;
+      }
+      #root {
+        padding: 2rem;
+        text-align: center;
+      }
+      .card {
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 1rem auto;
+        padding: 1.5rem;
+        border-radius: 8px;
+        max-width: 600px;
+      }
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #222;
+        color: white;
+        margin-top: 2rem;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Navigation -->
+    <nav>
+      <h1>Library Management System</h1>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+      <h2>Welcome to Our Library</h2>
+      <p>Manage books, users, and more efficiently</p>
+    </header>
+
+    <!-- Main Content -->
+    <div id="root">
+      <div class="card">
+        <h3>Features</h3>
+        <ul style="list-style-type: none; padding: 0;">
+          <li>✔ Manage book inventory</li>
+          <li>✔ Track borrow and return status</li>
+          <li>✔ User-friendly interface</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Library Management System. All Rights Reserved.</p>
+    </footer>
   </body>
 </html>
