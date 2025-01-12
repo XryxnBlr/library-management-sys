@@ -1,0 +1,22 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+  db:
+    image: "postgres:latest"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: librarydb
+    ports:
+      - "5432:5432"

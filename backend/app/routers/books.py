@@ -4,13 +4,15 @@ from pydantic import BaseModel
 from app import crud, schemas
 from app.database import get_db
 from app.routers.notifications import add_notification
+from typing import List
+
 
 router = APIRouter()
 
 class BorrowReturnRequest(BaseModel):
     user_id: int
 
-@router.get("/", response_model=list[schemas.Book])
+@router.get("/", response_model=List[schemas.Book])
 def read_books(db: Session = Depends(get_db)):
     return crud.get_books(db)
 
